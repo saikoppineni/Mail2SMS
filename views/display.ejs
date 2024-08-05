@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-color: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(8px);
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        /* Style for the list */
+        #display {
+            list-style-type: none;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.9);
+            /* slightly less transparent white for better readability */
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+            overflow-y: auto;
+            /* Scrollbar if content exceeds container height */
+            max-height: 60vh;
+        }
+
+        #display li {
+            margin: 4px 0;
+            border-bottom: 1px solid #ddd;
+            padding: 8px 0;
+        }
+
+        /* Style for the form */
+        .email-form {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .email-form input[type="email"] {
+            padding: 10px;
+            margin-right: 5px;
+            width: 100%;
+            max-width: 380px;
+            font-weight: bold;
+            border-radius: 5px;
+            border-bottom: 2px solid black;
+            margin-bottom: 2em;
+            background-color: transparent;
+        }
+
+        .email-form button {
+            padding: 10px 15px;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            width: 90%;
+            max-width: 400px;
+        }
+        #change-mobile {
+            padding: 10px 15px;
+            background-color: transparent;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            margin-top: 1rem;
+            border-radius: 5px;
+            max-width: 400px;
+        }
+        #change-mobile:hover{
+            color: gray;
+        }
+        .email-form button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+    <ul id="display">
+        <li>Your Priorities : </li>
+        <% priorityEmails.forEach((element)=> { %>
+            <li>
+                <%= element %>
+            </li>
+            <% }); %>
+    </ul>
+    <form method="POST" action="/add-to-priority" class="email-form">
+        <input name="email" type="email" id="email-input" placeholder="Enter an email address">
+        <button type="submit">ADD EMAIL</button>
+    </form>
+    <form action="/add-mobile">
+        <button id="change-mobile" type="submit">
+            Click here to change mobile
+        </button>
+    </form>
+</body>
+
+</html>

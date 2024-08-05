@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+        background-image:url('bg2.jpg');
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+            background-color: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(8px);
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            max-width: 800px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .heading {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .mobile-input {
+            width: 85%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .save-button {
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        .save-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <form method="POST" action="/add-mobile/tovar"  class="container">
+        <div class="heading">Enter your Number</div>
+        <input type="tel" name = "mobileInput" id="mobile-input" class="mobile-input" placeholder="Enter your mobile number" required>
+        <button id="save-button" class="save-button" type="submit">Save</button>
+    </form>
+
+</body>
+</html>

@@ -1,0 +1,62 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-image: url('bg1.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-color: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(8px);
+    color: #333333;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    font-size: 2.5vw;
+    margin-bottom: 20px;
+    color: #000000;
+}
+
+p {
+    color: #D6EAF0;
+    /* Adjusted color for better visibility on the background */
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+#continue {
+    background-color: #007BFF;
+    /* Vivid blue */
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    width: 20vw;
+    margin: 1rem auto;
+    border-radius: 4px;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+#continue:hover {
+    background-color: #003b79;
+    /* Darker shade of blue on hover */
+}
+
+
+#googleform {
+    /* Slightly transparent white to let a bit of the background show through */
+    display: flex;
+    flex-direction: column;
+    width: 60vw;
+    max-width: 400px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.08);
+    /* Soft shadow for a touch of depth */
+    padding: 0;
+    border-radius: 4
+}
